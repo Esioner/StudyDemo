@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".RxJava.RXJavaLesson1" />
         <activity android:name=".RxJava.RxJavaMainActivity" />
+        <activity android:name=".RxJava.RXJavaLesson2" />
+        <activity android:name=".RxJava.RXJavaLesson3" />
     </application>
 
 </manifest>

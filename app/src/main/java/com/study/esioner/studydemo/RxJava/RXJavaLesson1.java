@@ -24,20 +24,16 @@ public class RXJavaLesson1 extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rxjava_layout_1);
-
+        //创建一个 上游 Observable,被观察者
         Observable observable = Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
                 try {
+                    //发送事件
                     e.onNext("yang");
-                    Thread.sleep(2000);
                     e.onNext("zhang");
-                    Thread.sleep(2000);
                     e.onNext("xu");
-                    Thread.sleep(2000);
                     e.onNext("yang");
-                    e.onError(new Throwable("ERROR"));
-                    Thread.sleep(2000);
                     e.onComplete();
                     e.onNext("han");
                 } catch (Exception ex) {
@@ -45,17 +41,24 @@ public class RXJavaLesson1 extends AppCompatActivity {
                 }
             }
         });
+        //创建一个下游 Observer，观察者
         Observer observer = new Observer() {
+            private Disposable d;
+            private int i = 0;
             @Override
             public void onSubscribe(Disposable d) {
+                this.d = d;
 
             }
-
             @Override
             public void onNext(Object value) {
                 Log.d(TAG, "onNext: " + value);
+                i++;
+                if (i >= 1) {
+                    Log.d(TAG, "Disposable: ");
+                    d.dispose();//取消接收事件，被观察者会继续接收事件，但是观察者已经停止接收事件
+                }
             }
-
             @Override
             public void onError(Throwable e) {
                 Log.e(TAG, "onError: " + e);
@@ -66,6 +69,7 @@ public class RXJavaLesson1 extends AppCompatActivity {
                 Log.d(TAG, "onComplete: ");
             }
         };
+        //将 Observable 与 Observer 绑定
         observable.subscribe(observer);
     }
 }

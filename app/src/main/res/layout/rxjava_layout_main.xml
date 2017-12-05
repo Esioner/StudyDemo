@@ -9,4 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RXjava lesson 1"/>
+    <Button
+        android:id="@+id/btn_rxjava_lesson_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RXjava lesson 2"/>
+    <Button
+        android:id="@+id/btn_rxjava_lesson_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RXjava lesson 3"/>
 </LinearLayout>

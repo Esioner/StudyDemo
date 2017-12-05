@@ -17,6 +17,8 @@ import com.study.esioner.studydemo.R;
 public class RxJavaMainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnLesson1;
+    private Button btnLesson2;
+    private Button btnLesson3;
     private Context mContext = this;
 
     @Override
@@ -31,6 +33,10 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
     private void initView() {
         btnLesson1 = findViewById(R.id.btn_rxjava_lesson_1);
         btnLesson1.setOnClickListener(this);
+        btnLesson2 = findViewById(R.id.btn_rxjava_lesson_2);
+        btnLesson2.setOnClickListener(this);
+        btnLesson3 = findViewById(R.id.btn_rxjava_lesson_3);
+        btnLesson3.setOnClickListener(this);
 
     }
 
@@ -40,8 +46,16 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
         switch (v.getId()) {
             case R.id.btn_rxjava_lesson_1:
                 intent = new Intent(mContext, RXJavaLesson1.class);
-                startActivity(intent);
                 break;
+            case R.id.btn_rxjava_lesson_2:
+                intent = new Intent(mContext, RXJavaLesson2.class);
+                break;
+            case R.id.btn_rxjava_lesson_3:
+                intent = new Intent(mContext, RXJavaLesson3.class);
+                break;
+            default:
+                intent = null;
         }
+        startActivity(intent);
     }
 }
