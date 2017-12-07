@@ -1,4 +1,4 @@
-package com.study.esioner.studydemo.RxJava;
+package com.study.esioner.studydemo.rxjava;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,6 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
-import io.reactivex.Observer;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 

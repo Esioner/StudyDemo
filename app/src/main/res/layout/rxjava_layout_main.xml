@@ -19,4 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RXjava lesson 3"/>
+    <Button
+        android:id="@+id/btn_rxjava_lesson_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RXjava lesson 4"/>
+    <Button
+        android:id="@+id/btn_rxjava_lesson_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RXjava lesson 7"/>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.study.esioner.studydemo.RxJava;
+package com.study.esioner.studydemo.rxjava;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

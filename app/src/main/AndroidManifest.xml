@@ -16,10 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RxJava.RXJavaLesson1" />
-        <activity android:name=".RxJava.RxJavaMainActivity" />
-        <activity android:name=".RxJava.RXJavaLesson2" />
-        <activity android:name=".RxJava.RXJavaLesson3" />
+        <activity android:name=".rxjava.RXJavaLesson1" />
+        <activity android:name=".rxjava.RxJavaMainActivity" />
+        <activity android:name=".rxjava.RXJavaLesson2" />
+        <activity android:name=".rxjava.RXJavaLesson3" />
+        <activity android:name=".rxjava.RXJavaLesson4" />
+        <activity android:name=".rxjava.RXJavaLesson7" />
     </application>
 
 </manifest>

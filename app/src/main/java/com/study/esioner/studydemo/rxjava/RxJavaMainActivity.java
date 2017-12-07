@@ -1,4 +1,4 @@
-package com.study.esioner.studydemo.RxJava;
+package com.study.esioner.studydemo.rxjava;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +19,8 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
     private Button btnLesson1;
     private Button btnLesson2;
     private Button btnLesson3;
+    private Button btnLesson4;
+    private Button btnLesson7;
     private Context mContext = this;
 
     @Override
@@ -37,6 +39,10 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
         btnLesson2.setOnClickListener(this);
         btnLesson3 = findViewById(R.id.btn_rxjava_lesson_3);
         btnLesson3.setOnClickListener(this);
+        btnLesson4 = findViewById(R.id.btn_rxjava_lesson_4);
+        btnLesson4.setOnClickListener(this);
+        btnLesson7 = findViewById(R.id.btn_rxjava_lesson_7);
+        btnLesson7.setOnClickListener(this);
 
     }
 
@@ -52,6 +58,12 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btn_rxjava_lesson_3:
                 intent = new Intent(mContext, RXJavaLesson3.class);
+                break;
+            case R.id.btn_rxjava_lesson_4:
+                intent = new Intent(mContext, RXJavaLesson4.class);
+                break;
+            case R.id.btn_rxjava_lesson_7:
+                intent = new Intent(mContext, RXJavaLesson7.class);
                 break;
             default:
                 intent = null;
