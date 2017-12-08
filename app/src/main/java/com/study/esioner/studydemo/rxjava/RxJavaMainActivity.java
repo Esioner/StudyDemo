@@ -21,6 +21,7 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
     private Button btnLesson3;
     private Button btnLesson4;
     private Button btnLesson7;
+    private Button btnLessonPractice;
     private Context mContext = this;
 
     @Override
@@ -43,8 +44,11 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
         btnLesson4.setOnClickListener(this);
         btnLesson7 = findViewById(R.id.btn_rxjava_lesson_7);
         btnLesson7.setOnClickListener(this);
+        btnLessonPractice = findViewById(R.id.btn_rxjava_lesson_practice);
+        btnLessonPractice.setOnClickListener(this);
 
     }
+
 
     @Override
     public void onClick(View v) {
@@ -64,6 +68,10 @@ public class RxJavaMainActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btn_rxjava_lesson_7:
                 intent = new Intent(mContext, RXJavaLesson7.class);
+                break;
+
+            case R.id.btn_rxjava_lesson_practice:
+                intent = new Intent(mContext, RXJavaLessonPractice.class);
                 break;
             default:
                 intent = null;

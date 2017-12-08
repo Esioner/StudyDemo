@@ -8,25 +8,36 @@
         android:id="@+id/btn_rxjava_lesson_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RXjava lesson 1"/>
+        android:text="RXjava lesson 1" />
+
     <Button
         android:id="@+id/btn_rxjava_lesson_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RXjava lesson 2"/>
+        android:text="RXjava lesson 2" />
+
     <Button
         android:id="@+id/btn_rxjava_lesson_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RXjava lesson 3"/>
+        android:text="RXjava lesson 3" />
+
     <Button
         android:id="@+id/btn_rxjava_lesson_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RXjava lesson 4"/>
+        android:text="RXjava lesson 4" />
+
     <Button
         android:id="@+id/btn_rxjava_lesson_7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RXjava lesson 7"/>
+        android:text="RXjava lesson 7" />
+
+    <Button
+        android:id="@+id/btn_rxjava_lesson_practice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RXjava lesson Practice" />
+
 </LinearLayout>

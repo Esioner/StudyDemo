@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.study.esioner.studydemo.retrofit.RetrofitMainActivity;
 import com.study.esioner.studydemo.rxjava.RxJavaMainActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private Button btnRxJavaActivity;
     private Context mContext = this;
+    private Button btnRetrofitActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnRxJavaActivity = findViewById(R.id.btn_rxjava_activity);
         btnRxJavaActivity.setOnClickListener(this);
+        btnRetrofitActivity = findViewById(R.id.btn_retrofit_activity);
+        btnRetrofitActivity.setOnClickListener(this);
 
     }
 
@@ -40,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_rxjava_activity:
                 intent = new Intent(mContext, RxJavaMainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_retrofit_activity:
+                intent = new Intent(mContext, RetrofitMainActivity.class);
                 startActivity(intent);
                 break;
             default:
