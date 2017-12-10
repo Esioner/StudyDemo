@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.study.esioner.studydemo.retrofit.RetrofitMainActivity;
 import com.study.esioner.studydemo.rxjava.RxJavaMainActivity;
+import com.study.esioner.studydemo.rxjava_with_retrofit.RxJavaJinShanTranslate;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     /**
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnRxJavaActivity;
     private Context mContext = this;
     private Button btnRetrofitActivity;
+    private Button btnRxJavaRetrofitActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRxJavaActivity.setOnClickListener(this);
         btnRetrofitActivity = findViewById(R.id.btn_retrofit_activity);
         btnRetrofitActivity.setOnClickListener(this);
+        btnRxJavaRetrofitActivity = findViewById(R.id.btn_rxjava_retrofit_activity);
+        btnRxJavaRetrofitActivity.setOnClickListener(this);
 
     }
 
@@ -48,6 +52,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_retrofit_activity:
                 intent = new Intent(mContext, RetrofitMainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_rxjava_retrofit_activity:
+                intent = new Intent(mContext, RxJavaJinShanTranslate.class);
                 startActivity(intent);
                 break;
             default:

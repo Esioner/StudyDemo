@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 
     <Button
         android:id="@+id/btn_retrofit_1"
@@ -9,4 +11,15 @@
         android:layout_height="wrap_content"
         android:text="Retrofit lesson 1" />
 
+    <Button
+        android:id="@+id/btn_jin_shan_translate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit lesson - 金山翻译" />
+
+    <Button
+        android:id="@+id/btn_you_dao_translate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit lesson - 有道翻译" />
 </LinearLayout>

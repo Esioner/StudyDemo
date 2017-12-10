@@ -26,6 +26,10 @@ public class RetrofitMainActivity extends AppCompatActivity implements View.OnCl
     private void initView() {
         Button btnRetrofit1 = findViewById(R.id.btn_retrofit_1);
         btnRetrofit1.setOnClickListener(this);
+        Button btnRetrofitJinShanTranslate = findViewById(R.id.btn_jin_shan_translate);
+        btnRetrofitJinShanTranslate.setOnClickListener(this);
+        Button btnRetrofitYouDaoTranslate = findViewById(R.id.btn_you_dao_translate);
+        btnRetrofitYouDaoTranslate.setOnClickListener(this);
 
     }
 
@@ -36,6 +40,13 @@ public class RetrofitMainActivity extends AppCompatActivity implements View.OnCl
             case R.id.btn_retrofit_1:
                 intent = new Intent(this, RetrofitLesson1.class);
                 break;
+            case R.id.btn_jin_shan_translate:
+                intent = new Intent(this, JinShanTranslate.class);
+                break;
+            case R.id.btn_you_dao_translate:
+                intent = new Intent(this, YouDaoTranslation.class);
+                break;
+
             default:
                 intent = null;
                 break;
