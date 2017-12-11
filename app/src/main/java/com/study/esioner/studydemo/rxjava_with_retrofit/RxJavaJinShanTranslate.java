@@ -1,7 +1,6 @@
 package com.study.esioner.studydemo.rxjava_with_retrofit;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -18,7 +17,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
@@ -31,7 +29,7 @@ import retrofit2.http.Query;
 
 public class RxJavaJinShanTranslate extends AppCompatActivity {
 
-    private static final String TAG = "RxJava && Retrofit";
+    private static final String TAG = "RxJava&&Retrofit";
     // 可重试次数
     private int maxConnectCount = 10;
     // 当前已重试次数
@@ -40,7 +38,7 @@ public class RxJavaJinShanTranslate extends AppCompatActivity {
     private int waitRetryTime = 0;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //创建 Retrofit 对象
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://fy.iciba.com/")
@@ -115,7 +113,7 @@ public class RxJavaJinShanTranslate extends AppCompatActivity {
                     public void onNext(Translation value) {
                         //接收服务器返回的数据
                         Log.d(TAG, "onNext: 发送成功");
-                        value.toString();
+                        Log.d(TAG, "onNext: " + value.toString());
                     }
 
                     @Override
@@ -133,7 +131,7 @@ public class RxJavaJinShanTranslate extends AppCompatActivity {
 
     interface GetResponse {
         @GET("ajax.php?a=fy&f=auto&t=ch")
-        Call<Translation> getContent(@Query("w") String w);
+        Observable<Translation> getContent(@Query("w") String w);
     }
 
     class JinShanBean {
@@ -215,10 +213,25 @@ class Translation {
         private String vendor;
         private String out;
         private int errNo;
+
+        @Override
+        public String toString() {
+            return "content{" +
+                    "from='" + from + '\'' +
+                    ", to='" + to + '\'' +
+                    ", vendor='" + vendor + '\'' +
+                    ", out='" + out + '\'' +
+                    ", errNo=" + errNo +
+                    '}';
+        }
     }
 
     //定义 输出返回数据 的方法
-    public void show() {
-        Log.d("RxJava", content.out);
+    @Override
+    public String toString() {
+        return "Translation{" +
+                "status=" + status +
+                ", content=" + content +
+                '}';
     }
 }
